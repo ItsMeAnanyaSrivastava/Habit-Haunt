@@ -286,8 +286,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## 👤 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/itsmeananyasrivastava)
-- LinkedIn: [Your Name](https://linkedin.com/in/itsmeananyasrivastava)
+- GitHub: [@itsmeananyasrivastava](https://github.com/itsmeananyasrivastava)
+- LinkedIn: [Ananya](https://linkedin.com/in/itsmeananyasrivastava)
 ---
 
 ## 🙏 Acknowledgments
