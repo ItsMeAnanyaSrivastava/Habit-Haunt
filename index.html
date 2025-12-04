@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Haunt - Defeat Your Demons</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="page active">
+        <div class="fog-layer fog-1"></div>
+        <div class="fog-layer fog-2"></div>
+        <div class="castle-bg"></div>
+        <div class="floating-bats">
+            <div class="bat"></div>
+            <div class="bat"></div>
+            <div class="bat"></div>
+        </div>
+        <div class="landing-content">
+            <h1 class="glitch-text">HABIT HAUNT</h1>
+            <p class="tagline">Your habits have become monsters. It's time to fight back.</p>
+            <button class="neon-button start-btn" onclick="navigateTo('habit-input')">
+                <span class="rune-icon">☠</span>
+                Start Your Escape
+                <span class="glow-effect"></span>
+            </button>
+        </div>
+        <div class="particles"></div>
+    </div>
+
+    <!-- Habit Input Page -->
+    <div id="habit-input" class="page">
+        <div class="ritual-chamber">
+            <div class="candle candle-left"></div>
+            <div class="candle candle-right"></div>
+            <div class="ritual-content glass-panel">
+                <h2 class="runic-title">Summon Your Demon</h2>
+                <p class="ritual-text">Name the habit that haunts you...</p>
+                <div class="input-group">
+                    <label class="runic-label">⚡ Cursed Habit</label>
+                    <input type="text" id="habit-name" class="ritual-input" placeholder="e.g., Procrastination, Smoking, Junk Food">
+                </div>
+                <div class="input-group">
+                    <label class="runic-label">🔮 How often does it strike?</label>
+                    <select id="habit-frequency" class="ritual-input">
+                        <option>Daily</option>
+                        <option>Multiple times per day</option>
+                        <option>Weekly</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label class="runic-label">💀 Why must it be destroyed?</label>
+                    <textarea id="habit-reason" class="ritual-input" rows="3" placeholder="What pain does this habit cause you?"></textarea>
+                </div>
+                <button class="blood-button" onclick="summonMonster()">
+                    <span class="skull-icon">💀</span>
+                    Summon Your Monster
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Monster Profile Page -->
+    <div id="monster-profile" class="page">
+        <div class="profile-container">
+            <div class="stone-frame glass-panel">
+                <h2 class="blood-drip-title">Your Demon Awakens</h2>
+                <div class="monster-card">
+                    <div class="monster-art" id="monster-art"></div>
+                    <h3 class="monster-name" id="monster-name">The Procrastinator</h3>
+                    <div class="blood-divider"></div>
+                    <div class="monster-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">😱 Fear Level</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill fear-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">💪 Strength</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill strength-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">🛡️ Your Resistance</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill resistance-fill" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">❤️ Monster Health</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill health-fill" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weakness-box">
+                        <p class="weakness-title">🔥 Weakness</p>
+                        <p class="weakness-text">Daily discipline and consistent action</p>
+                    </div>
+                </div>
+                <button class="neon-button" onclick="navigateTo('battle-dashboard')">
+                    ⚔️ Enter Battle
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Battle Dashboard -->
+    <div id="battle-dashboard" class="page">
+        <div class="battle-arena">
+            <div class="battle-header">
+                <div class="player-hp glass-panel">
+                    <span class="hp-label">Your Willpower</span>
+                    <div class="hp-bar">
+                        <div class="hp-fill player-hp-fill" style="width: 80%">80/100</div>
+                    </div>
+                </div>
+                <div class="monster-hp glass-panel">
+                    <span class="hp-label">Monster Health</span>
+                    <div class="hp-bar">
+                        <div class="hp-fill monster-hp-fill" style="width: 65%">65/100</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="battle-content">
+                <div class="ritual-tasks glass-panel">
+                    <h3 class="task-title">⚡ Today's Rituals</h3>
+                    <div class="task-list">
+                        <div class="task-item">
+                            <input type="checkbox" id="task1" class="task-checkbox">
+                            <label for="task1">Morning meditation (10 min)</label>
+                            <span class="damage-badge">-10 HP</span>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" id="task2" class="task-checkbox">
+                            <label for="task2">Avoid trigger for 4 hours</label>
+                            <span class="damage-badge">-15 HP</span>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" id="task3" class="task-checkbox">
+                            <label for="task3">Journal your progress</label>
+                            <span class="damage-badge">-8 HP</span>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" id="task4" class="task-checkbox">
+                            <label for="task4">Complete one productive task</label>
+                            <span class="damage-badge">-12 HP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="spell-actions">
+                    <button class="spell-button focus-blast">
+                        <span class="spell-icon">🔮</span>
+                        <span class="spell-name">Focus Blast</span>
+                        <span class="spell-desc">Deal 20 damage</span>
+                    </button>
+                    <button class="spell-button discipline-shield">
+                        <span class="spell-icon">🛡️</span>
+                        <span class="spell-name">Discipline Shield</span>
+                        <span class="spell-desc">Block temptation</span>
+                    </button>
+                    <button class="spell-button willpower-surge">
+                        <span class="spell-icon">⚡</span>
+                        <span class="spell-name">Willpower Surge</span>
+                        <span class="spell-desc">Restore 15 HP</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="battle-nav">
+                <button class="nav-btn" onclick="navigateTo('progress-map')">🗺️ Map</button>
+                <button class="nav-btn" onclick="navigateTo('analytics')">📊 Stats</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Map -->
+    <div id="progress-map" class="page">
+        <div class="forest-path">
+            <div class="map-header glass-panel">
+                <h2 class="map-title">🌙 The Path of Redemption</h2>
+                <p class="map-subtitle">Each lantern is a victory. Each tombstone is a lesson.</p>
+            </div>
+            
+            <div class="path-container">
+                <div class="moonlight-beam beam-1"></div>
+                <div class="moonlight-beam beam-2"></div>
+                
+                <div class="path-node completed">
+                    <div class="lantern lit"></div>
+                    <span class="day-label">Day 1</span>
+                </div>
+                <div class="path-node completed">
+                    <div class="lantern lit"></div>
+                    <span class="day-label">Day 2</span>
+                </div>
+                <div class="path-node completed">
+                    <div class="lantern lit"></div>
+                    <span class="day-label">Day 3</span>
+                </div>
+                <div class="path-node failed">
+                    <div class="tombstone">⚰️</div>
+                    <span class="day-label">Day 4</span>
+                </div>
+                <div class="path-node completed">
+                    <div class="lantern lit"></div>
+                    <span class="day-label">Day 5</span>
+                </div>
+                <div class="path-node current">
+                    <div class="lantern glowing"></div>
+                    <span class="day-label">Today</span>
+                </div>
+                <div class="path-node locked">
+                    <div class="lantern dark"></div>
+                    <span class="day-label">Day 7</span>
+                </div>
+            </div>
+            
+            <button class="neon-button" onclick="navigateTo('battle-dashboard')">⚔️ Return to Battle</button>
+        </div>
+    </div>
+
+    <!-- Analytics Page -->
+    <div id="analytics" class="page">
+        <div class="analytics-container">
+            <h2 class="analytics-title">📊 Cursed Analytics</h2>
+            
+            <div class="analytics-grid">
+                <div class="stat-card glass-panel">
+                    <h3 class="card-title">🔥 Consistency Meter</h3>
+                    <div class="flame-meter">
+                        <div class="flame-fill" style="height: 73%">
+                            <span class="flame-icon">🔥</span>
+                        </div>
+                    </div>
+                    <p class="stat-value">73% Streak</p>
+                </div>
+                
+                <div class="stat-card glass-panel">
+                    <h3 class="card-title">👻 Ghost Chart</h3>
+                    <div class="ghost-chart">
+                        <div class="chart-bar" style="height: 60%"></div>
+                        <div class="chart-bar" style="height: 75%"></div>
+                        <div class="chart-bar" style="height: 45%"></div>
+                        <div class="chart-bar" style="height: 85%"></div>
+                        <div class="chart-bar" style="height: 90%"></div>
+                        <div class="chart-bar" style="height: 70%"></div>
+                        <div class="chart-bar" style="height: 95%"></div>
+                    </div>
+                    <p class="stat-value">Weekly Progress</p>
+                </div>
+                
+                <div class="stat-card glass-panel">
+                    <h3 class="card-title">🩸 Damage Dealt</h3>
+                    <div class="blood-progress">
+                        <div class="blood-bar" style="width: 65%"></div>
+                    </div>
+                    <p class="stat-value">65/100 HP Destroyed</p>
+                </div>
+                
+                <div class="stat-card glass-panel">
+                    <h3 class="card-title">⚡ Power Stats</h3>
+                    <div class="power-stats">
+                        <div class="power-row">
+                            <span>Total Days</span>
+                            <span class="power-value">21</span>
+                        </div>
+                        <div class="power-row">
+                            <span>Victories</span>
+                            <span class="power-value">15</span>
+                        </div>
+                        <div class="power-row">
+                            <span>Current Streak</span>
+                            <span class="power-value">5</span>
+                        </div>
+                        <div class="power-row">
+                            <span>Best Streak</span>
+                            <span class="power-value">8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="neon-button" onclick="navigateTo('battle-dashboard')">⚔️ Return to Battle</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
