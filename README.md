@@ -286,10 +286,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## 👤 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Name](https://linkedin.com/in/yourname)
-- Email: your.email@example.com
-
+- GitHub: [@yourusername](https://github.com/itsmeananyasrivastava)
+- LinkedIn: [Your Name](https://linkedin.com/in/itsmeananyasrivastava)
 ---
 
 ## 🙏 Acknowledgments
@@ -326,7 +324,7 @@ This project was created for **Kiroween 2025**, combining Halloween horror aesth
 
 ### 🦇 Battle Your Demons. Track Your Progress. Escape Your Habits. 🦇
 
-**[⭐ Star this repo](https://github.com/yourusername/habit-haunt)** if you found it helpful!
+**[⭐ Star this repo](https://github.com/itsmeananyasrivastava/habit-haunt)** if you found it helpful!
 
 Made with 💜 and 🎃 for Kiroween 2025
 
